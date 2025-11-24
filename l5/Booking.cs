@@ -15,7 +15,6 @@ namespace l5
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
 
-        public Booking() { }
 
         public Booking(int bookingId, int clientId, int roomId, DateTime bookingDate, DateTime checkIn, DateTime checkOut)
         {

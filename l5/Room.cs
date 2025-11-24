@@ -1,5 +1,4 @@
-﻿using Aspose.Cells;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -16,7 +15,6 @@ namespace l5
         public decimal PricePerDay { get; set; }
         public int Category { get; set; }
 
-        public Room() { }
 
         public Room(int roomId, int floor, int capacity, decimal pricePerDay, int category)
         {

@@ -15,7 +15,6 @@ namespace l5
         public string Surname { get; set; }
         public string Address { get; set; }
 
-        public Client() { }
 
         public Client(int clientId, string lastName, string firstName, string surname, string address)
         {
