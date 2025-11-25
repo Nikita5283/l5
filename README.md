@@ -34,7 +34,7 @@
 код номера, номер комнаты, этаж, число мест, стоимость проживания за сутки, категория гостиницы.<br>
 На рисунке приведена схема указанной базы данных.
 
-<img width="300" height="200" alt="database_schema" src="https://github.com/user-attachments/assets/527f92c0-89a8-41b2-87ba-6f6a155ace87" />
+<img width="300" height="200" alt="database_schema" src="https://github.com/user-attachments/assets/527f92c0-89a8-41b2-87ba-6f6a155ace87" /><br>
 
 ## Алгоритм решения
 
@@ -107,46 +107,46 @@
 **Действие:** Загрузка данных из excel файла и просмотр всех клиентов, номеров и бронирований.<br>
 **Результат:**<br>
 **Таблица "Бронирование":**<br>
-<img width="600" height="500" alt="booking_table" src="https://github.com/Nikita5283/l5/blob/main/booking_inp.png" />
+<img width="600" height="500" alt="booking_table" src="https://github.com/Nikita5283/l5/blob/main/booking_inp.png" /><br>
 **Таблица "Клиенты":**<br>
-<img width="600" height="500" alt="clients_table" src="https://github.com/Nikita5283/l5/blob/main/clients_inp.png" />
+<img width="600" height="500" alt="clients_table" src="https://github.com/Nikita5283/l5/blob/main/clients_inp.png" /><br>
 **Таблица "Бронирование":**<br>
-<img width="600" height="500" alt="rooms_table" src="https://github.com/Nikita5283/l5/blob/main/rooms_inp.png" />
+<img width="600" height="500" alt="rooms_table" src="https://github.com/Nikita5283/l5/blob/main/rooms_inp.png" /><br>
 
 ### Тест 2
 
 **Действие:** Добавление объектов в классы.<br>
 **Результат:**<br>
 **Добавление клиента:**<br>
-<img width="600" height="500" alt="add_client" src="https://github.com/Nikita5283/l5/blob/main/add_client.png" />
+<img width="600" height="500" alt="add_client" src="https://github.com/Nikita5283/l5/blob/main/add_client.png" /><br>
 **Добавление брони:**<br>
-<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" />
+<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" /><br>
 **Добавление номера:**<br>
-<img width="600" height="500" alt="add_room" src="https://github.com/Nikita5283/l5/blob/main/add_room.png" />
+<img width="600" height="500" alt="add_room" src="https://github.com/Nikita5283/l5/blob/main/add_room.png" /><br>
 
 ### Тест 3
 
 **Действие:** Удаление объектов из списка.<br>
 **Результат:**<br>
 **Удаление клиента:**<br>
-<img width="600" height="500" alt="delete_client" src="https://github.com/Nikita5283/l5/blob/main/delete_client.png" />
+<img width="600" height="500" alt="delete_client" src="https://github.com/Nikita5283/l5/blob/main/delete_client.png" /><br>
 **Удаление брони:**<br>
-<img width="600" height="500" alt="delete_booking" src="https://github.com/Nikita5283/l5/blob/main/delete_booking.png" />
+<img width="600" height="500" alt="delete_booking" src="https://github.com/Nikita5283/l5/blob/main/delete_booking.png" /><br>
 **Удаление номера:**<br>
-<img width="600" height="500" alt="delete_room" src="https://github.com/Nikita5283/l5/blob/main/delete_room.png" />
+<img width="600" height="500" alt="delete_room" src="https://github.com/Nikita5283/l5/blob/main/delete_room.png" /><br>
 
 ### Тест 4
 
 **Действие:** Запросы.<br>
 **Результат:**<br>
 **Запрос А - список номеров заданной категории:**<br>
-<img width="600" height="500" alt="queryA" src="https://github.com/Nikita5283/l5/blob/main/queryA.png" />
+<img width="600" height="500" alt="queryA" src="https://github.com/Nikita5283/l5/blob/main/queryA.png" /><br>
 **Запрос B - число бронирований указанного клиента:**<br>
-<img width="600" height="500" alt="queryB" src="https://github.com/Nikita5283/l5/blob/main/queryB.png" />
+<img width="600" height="500" alt="queryB" src="https://github.com/Nikita5283/l5/blob/main/queryB.png" /><br>
 **Запрос C - перечень броней с именем клиента и номером комнаты:**<br>
-<img width="600" height="500" alt="queryC" src="https://github.com/Nikita5283/l5/blob/main/queryC.png" />
+<img width="600" height="500" alt="queryC" src="https://github.com/Nikita5283/l5/blob/main/queryC.png" /><br>
 **Запрос D - сумма предполагаемой выручки за все брони:**<br>
-<img width="600" height="500" alt="queryD" src="https://github.com/Nikita5283/l5/blob/main/queryD.png" />
+<img width="600" height="500" alt="queryD" src="https://github.com/Nikita5283/l5/blob/main/queryD.png" /><br>
 
 ### Тест 5
 
@@ -154,6 +154,6 @@
 **Результат:**<br>
 **Добавление брони:**<br>
 Консоль:<br>
-<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" />
+<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" /><br>
 Excel файл:<br>
-<img width="600" height="500" alt="add_booking_to_excel" src="https://github.com/Nikita5283/l5/blob/main/add_booking_to_excel.png" />
+<img width="600" height="500" alt="add_booking_to_excel" src="https://github.com/Nikita5283/l5/blob/main/add_booking_to_excel.png" /><br>
