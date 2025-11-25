@@ -81,6 +81,7 @@
 
     1. Методы
         - LoadFromExcel: Из каждого листа эксель файла читает данные построчно и записывает их в качестве объектов соответствующих классов
+        - GetDateFromCell: Чтение даты из ячейки эксель файла
         - SaveToExcel: Из каждого списка построчно записывает данные в соответствующий лист эксель файла
         - WriteHeader: Создает заголовки для каждого листа
         - ViewClients: Выводит на консоль всех клиентов
@@ -106,4 +107,53 @@
 **Действие:** Загрузка данных из excel файла и просмотр всех клиентов, номеров и бронирований.<br>
 **Результат:**<br>
 **Таблица "Бронирование":**<br>
-<img width="600" height="500" alt="database_schema" src="https://github.com/Nikita5283/l5/blob/main/booking_inp.png" />
+<img width="600" height="500" alt="booking_table" src="https://github.com/Nikita5283/l5/blob/main/booking_inp.png" />
+**Таблица "Клиенты":**<br>
+<img width="600" height="500" alt="clients_table" src="https://github.com/Nikita5283/l5/blob/main/clients_inp.png" />
+**Таблица "Бронирование":**<br>
+<img width="600" height="500" alt="rooms_table" src="https://github.com/Nikita5283/l5/blob/main/rooms_inp.png" />
+
+### Тест 2
+
+**Действие:** Добавление объектов в классы.<br>
+**Результат:**<br>
+**Добавление клиента:**<br>
+<img width="600" height="500" alt="add_client" src="https://github.com/Nikita5283/l5/blob/main/add_client.png" />
+**Добавление брони:**<br>
+<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" />
+**Добавление номера:**<br>
+<img width="600" height="500" alt="add_room" src="https://github.com/Nikita5283/l5/blob/main/add_room.png" />
+
+### Тест 3
+
+**Действие:** Удаление объектов из списка.<br>
+**Результат:**<br>
+**Удаление клиента:**<br>
+<img width="600" height="500" alt="delete_client" src="https://github.com/Nikita5283/l5/blob/main/delete_client.png" />
+**Удаление брони:**<br>
+<img width="600" height="500" alt="delete_booking" src="https://github.com/Nikita5283/l5/blob/main/delete_booking.png" />
+**Удаление номера:**<br>
+<img width="600" height="500" alt="delete_room" src="https://github.com/Nikita5283/l5/blob/main/delete_room.png" />
+
+### Тест 4
+
+**Действие:** Запросы.<br>
+**Результат:**<br>
+**Запрос А - список номеров заданной категории:**<br>
+<img width="600" height="500" alt="queryA" src="https://github.com/Nikita5283/l5/blob/main/queryA.png" />
+**Запрос B - число бронирований указанного клиента:**<br>
+<img width="600" height="500" alt="queryB" src="https://github.com/Nikita5283/l5/blob/main/queryB.png" />
+**Запрос C - перечень броней с именем клиента и номером комнаты:**<br>
+<img width="600" height="500" alt="queryC" src="https://github.com/Nikita5283/l5/blob/main/queryC.png" />
+**Запрос D - сумма предполагаемой выручки за все брони:**<br>
+<img width="600" height="500" alt="queryD" src="https://github.com/Nikita5283/l5/blob/main/queryD.png" />
+
+### Тест 5
+
+**Действие:** Запись изменений в excel файл.<br>
+**Результат:**<br>
+**Добавление брони:**<br>
+Консоль:<br>
+<img width="600" height="500" alt="add_booking" src="https://github.com/Nikita5283/l5/blob/main/add_booking.png" />
+Excel файл:<br>
+<img width="600" height="500" alt="add_booking_to_excel" src="https://github.com/Nikita5283/l5/blob/main/add_booking_to_excel.png" />

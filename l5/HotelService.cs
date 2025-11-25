@@ -51,6 +51,7 @@ namespace l5
                 catch { }
             }
 
+
             // бронирование
             for (int i = 1; i <= sheetBooking.LastRowNum; i++)
             {
@@ -93,7 +94,7 @@ namespace l5
             }
         }
 
-
+        //чтение даты из ячейки
         private static DateTime GetDateFromCell(ICell cell)
         {
             if (cell == null)
@@ -103,9 +104,9 @@ namespace l5
             if (cell.CellType == CellType.Numeric)
             {
                 if (DateUtil.IsCellDateFormatted(cell))
-                    return cell.DateCellValue ?? throw new Exception("Numeric cell contains null date");
+                    return cell.DateCellValue ?? throw new Exception("Числовая ячейка содержит нулевую дату");
 
-                throw new Exception("Numeric cell is not a date");
+                throw new Exception("Числовая ячейка не является датой");
             }
 
             // Строка
@@ -116,7 +117,7 @@ namespace l5
                 if (DateTime.TryParse(s, out var dt))
                     return dt;
 
-                throw new Exception("Cannot parse string date: " + s);
+                throw new Exception("Невозможно разобрать строку даты: " + s);
             }
 
             // Формула
@@ -125,9 +126,9 @@ namespace l5
                 if (cell.CachedFormulaResultType == CellType.Numeric)
                 {
                     if (DateUtil.IsCellDateFormatted(cell))
-                        return cell.DateCellValue ?? throw new Exception("Formula numeric date is null");
+                        return cell.DateCellValue ?? throw new Exception("Формула числовой даты имеет значение null");
 
-                    throw new Exception("Formula numeric is not a date");
+                    throw new Exception("Числовая формула не является датой");
                 }
 
                 if (cell.CachedFormulaResultType == CellType.String)
@@ -137,13 +138,13 @@ namespace l5
                     if (DateTime.TryParse(s, out var dt))
                         return dt;
 
-                    throw new Exception("Cannot parse formula string date: " + s);
+                    throw new Exception("Невозможно разобрать дату строки формулы: " + s);
                 }
 
-                throw new Exception("Unsupported formula result type");
+                throw new Exception("Неподдерживаемый тип результата формулы");
             }
 
-            throw new Exception("Unsupported cell type: " + cell.CellType);
+            throw new Exception("Неподдерживаемый тип ячейки: " + cell.CellType);
         }
 
 

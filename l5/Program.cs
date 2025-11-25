@@ -17,7 +17,7 @@ namespace l5
 
             while (!exit)
             {
-                Console.WriteLine("\n=== Меню приложения (Гостиница) ===");
+                Console.WriteLine("\nМеню приложения (Гостиница)");
                 Console.WriteLine("1. Загрузить базу из Excel (файл: " + excelPath + ")");
                 Console.WriteLine("2. Просмотр таблиц");
                 Console.WriteLine("3. Удалить элемент по ключу");
@@ -126,6 +126,31 @@ namespace l5
             Console.WriteLine(ok ? "Удалено." : "Элемент с таким ID не найден.");
         }
 
+
+
+        static DateTime ReadDate()
+        {
+            while (true)
+            {
+                string input = Console.ReadLine();
+
+                if (DateTime.TryParseExact(
+                        input,
+                        "dd.MM.yyyy",
+                        System.Globalization.CultureInfo.InvariantCulture,
+                        System.Globalization.DateTimeStyles.None,
+                        out DateTime date))
+                {
+                    return date;
+                }
+
+                Console.Write("Неверный формат, нужен dd.MM.yyyy: ");
+            }
+        }
+
+
+
+
         static void AddItemMenu()
         {
             Console.WriteLine("Добавить: 1-Клиент, 2-Номер, 3-Бронь");
@@ -158,9 +183,9 @@ namespace l5
                         Console.Write("ID брони: "); int bid = int.Parse(Console.ReadLine());
                         Console.Write("ID клиента: "); int bcid = int.Parse(Console.ReadLine());
                         Console.Write("ID номера: "); int brid = int.Parse(Console.ReadLine());
-                        Console.Write("Дата брони (yyyy-MM-dd): "); DateTime bdate = DateTime.Parse(Console.ReadLine());
-                        Console.Write("Заезд (yyyy-MM-dd): "); DateTime ci = DateTime.Parse(Console.ReadLine());
-                        Console.Write("Выезд (yyyy-MM-dd): "); DateTime co = DateTime.Parse(Console.ReadLine());
+                        Console.Write("Дата брони (dd.MM.yyyy): "); DateTime bdate = ReadDate();
+                        Console.Write("Заезд (dd.MM.yyyy): "); DateTime ci = ReadDate();
+                        Console.Write("Выезд (dd.MM.yyyy): "); DateTime co = ReadDate();
                         HotelService.AddBooking(new Booking(bid, bcid, brid, bdate, ci, co));
                         Console.WriteLine("Бронь добавлена.");
                         break;
@@ -182,7 +207,7 @@ namespace l5
 
         static void RunQueriesMenu()
         {
-            Console.WriteLine("\n--- Запросы ---");
+            Console.WriteLine("\nЗапросы:");
 
             // 1 таблица
             Console.Write("A) Введите категорию для вывода всех номеров с этой категорией: ");
